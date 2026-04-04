@@ -13,7 +13,7 @@ body {
 
 :root {
     --bg-primary: #121212;
-    --text-primary: #f5f0e8;
+    --text-primary: #f5f0e8e5;
 
     /* spacing */
     --space-xs: .5rem;
@@ -25,7 +25,8 @@ body {
     --space-3xl: 5rem;
 
     /* border-colors */
-    --border-color-primary: #333333;
+    --border-color-primary: #fff;
+    --border-color-secondary: #333333;
 
     /* border-radius */
     --border-radius-xs: .25rem;
@@ -47,18 +48,34 @@ section {
     width: 100%;
     height: 100%;
     padding: var(--space-md);
-    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
 
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        .info {
-            padding: var(--space-sm) var(--space-md);
-            border: 2px solid var(--border-color-primary);
-            border-radius: var(--border-radius-sm);
-        }
+    .info {
+        padding: var(--space-sm) var(--space-md);
+        border: 1.5px solid var(--border-color-primary);
+        border-radius: var(--border-radius-sm);
     }
+}
+
+#board{
+    border: 1px solid var(--border-color-secondary);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+}
+
+.block{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-color-secondary);
 }
