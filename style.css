@@ -14,6 +14,7 @@ body {
 :root {
   --bg-primary: #121212;
   --text-primary: #f5f0e8e5;
+  --bg-fill: crimson;
   /* spacing */
   --space-xs: .5rem;
   --space-sm: 1rem;
@@ -57,18 +58,23 @@ nav {
   align-items: center;
 }
 nav .info {
-  padding: var(--space-sm) var(--space-md);
-  border: 1.5px solid var(--border-color-primary);
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--border-color-secondary);
   border-radius: var(--border-radius-sm);
 }
 
 #board {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
+  overflow: hidden;
 }
 
 .block {
   border: 1px solid var(--border-color-secondary);
+}
+
+.fill {
+  background-color: var(--bg-fill);
 }/*# sourceMappingURL=style.css.map */
