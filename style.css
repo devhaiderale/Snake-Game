@@ -15,6 +15,7 @@ body {
   --bg-primary: #121212;
   --text-primary: #f5f0e8e5;
   --bg-fill: crimson;
+  --bg-food: #ff4500;
   /* spacing */
   --space-xs: .5rem;
   --space-sm: 1rem;
@@ -77,4 +78,8 @@ nav .info {
 
 .fill {
   background-color: var(--bg-fill);
+}
+
+.food {
+  background-color: var(--bg-food);
 }/*# sourceMappingURL=style.css.map */
